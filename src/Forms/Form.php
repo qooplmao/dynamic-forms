@@ -118,7 +118,7 @@ class Form
 
             $component = new $class(
                 $definition['key'],
-                Arr::get($definition, 'label'),
+                Arr::get($definition, 'title', Arr::get($definition, 'label')),
                 Arr::get($definition, 'errorLabel'),
                 $children,
                 Arr::get($definition, 'validate', []),
