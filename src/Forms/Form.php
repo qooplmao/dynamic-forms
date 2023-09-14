@@ -125,7 +125,7 @@ class Form
                 Arr::get($definition, 'multiple', false),
                 Arr::get($definition, 'conditional'),
                 Arr::get($definition, 'customConditional'),
-                Arr::get($definition, 'case', 'mixed'),
+                Arr::get($definition, 'case', 'mixed') ?: 'mixed',
                 Arr::get($definition, 'calculateValue'),
                 Arr::get($definition, 'defaultValue'),
                 Arr::except($definition, ['key', 'label', 'components', 'validate', 'type', 'input', 'tableView', 'multiple', 'conditional', 'customConditional', 'calculateValue', 'case', 'errorLabel', 'defaultValue']),
