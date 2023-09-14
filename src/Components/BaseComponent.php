@@ -106,7 +106,11 @@ abstract class BaseComponent implements ComponentInterface
             return new JSONConditional(Arr::get($this->conditional, 'json'));
         }
 
-        if (Arr::exists($this->conditional, 'show') && Arr::exists($this->conditional, 'when') && Arr::exists($this->conditional, 'eq')) {
+        if (Arr::exists($this->conditional, 'show') &&
+            null !== $this->conditional['show'] &&
+            Arr::exists($this->conditional, 'when') &&
+            Arr::exists($this->conditional, 'eq')
+        ) {
             return new SimpleConditional(
                 Arr::get($this->conditional, 'show'),
                 Arr::get($this->conditional, 'when'),
