@@ -18,20 +18,21 @@ interface ComponentInterface
     /**
      * @param array $additional Other fields from the component definition (catch-all)
      */
-    public function __construct(
-        string $key,
-        ?string $label,
-        ?string $errorLabel,
-        array $components,
-        array $validations,
-        bool $hasMultipleValues,
-        ?array $conditional,
-        ?string $customConditional,
-        string $case,
-        null|array|string $calculateValue,
-        mixed $defaultValue,
-        array $additional,
-    );
+    // public function __construct(
+    //     string $key,
+    //     ?string $label,
+    //     ?string $errorLabel,
+    //     array $components,
+    //     array $validations,
+    //     bool $hasMultipleValues,
+    //     ?array $conditional,
+    //     ?string $customConditional,
+    //     string $case,
+    //     null|array|string $calculateValue,
+    //     mixed $defaultValue,
+    //     array $additional,
+    //     bool $searchable
+    // );
 
     /**
      * Component form key.
