@@ -129,6 +129,7 @@ class Form
                 Arr::get($definition, 'calculateValue'),
                 Arr::get($definition, 'defaultValue'),
                 Arr::except($definition, ['key', 'label', 'components', 'validate', 'type', 'input', 'tableView', 'multiple', 'conditional', 'customConditional', 'calculateValue', 'case', 'errorLabel', 'defaultValue']),
+                Arr::get($definition, 'searchable') ?: false
             );
 
             if (is_subclass_of($component, UploadInterface::class)) {
