@@ -41,6 +41,7 @@ abstract class BaseComponent implements ComponentInterface
         protected null|array|string $calculateValue,
         protected mixed $defaultValue,
         protected array $additional,
+        protected bool $searchable = false
     ) {
         //
     }
@@ -73,6 +74,11 @@ abstract class BaseComponent implements ComponentInterface
     public function hasMultipleValues(): bool
     {
         return $this->hasMultipleValues;
+    }
+
+    public function isSearchable(): bool
+    {
+        return $this->searchable;
     }
 
     /**
